@@ -9,10 +9,6 @@ stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
 
 
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
-nltk.download('wordnet')
-nltk.download('averaged_perceptron_tagger_eng')
 
 def get_pos_tag(pos):
     if pos.startswith('J'):
