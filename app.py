@@ -15,12 +15,12 @@ def home_page():
 @app.route('/result',methods = ['POST','GET'])
 def result():
     msg = request.form['msg']
-    print(msg,'\n')
+    # print(msg,'\n')
     cleaned_msg = preprocess_m.preprocess_msg(msg)
     X = vectorizor.transform([cleaned_msg])
     output = model.predict(X)
     op = 'HAM' if output[0]==0 else 'SPAM' if output[0]==1 else 'ERROR Occured'
-    print(op,'\n')
+    # print(op,'\n')
     return render_template('result.html',output = op)
 
 if __name__ == '__main__':
