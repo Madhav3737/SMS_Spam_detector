@@ -5,7 +5,7 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk import pos_tag
 from nltk.corpus import wordnet
-stop_words = set(stopwords.words('english'))
+# stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
 
 
@@ -26,7 +26,7 @@ def preprocess_msg(msg):
     msg = msg.lower()
     msg = ''.join([c for c in msg if c not in string.punctuation])
     word_list = word_tokenize(msg)
-    word_list = [w for w in word_list if w not in stop_words]
+    # word_list = [w for w in word_list if w not in stop_words]
     word_pos_tags = pos_tag(word_list)
     word_list = [lemmatizer.lemmatize(w,get_pos_tag(p)) for w,p in word_pos_tags]
     processed_msg = ' '.join(word_list)
