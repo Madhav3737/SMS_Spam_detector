@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result Page</title>
-</head>
-<body>
-    <h3>The message is {{output}}</h3>
-    <img src="/static/probab_pie_chart.png"><br>
-    <form action="/correct_pred" method="post"><button type="submit">Correct Prediction</button></form>
-    <h5>FeedBack Buttons</h5>
-    <form action="/wrong_pred" method="post"><button type="submit">Wrong Prediction</button></form>
-    <p><b>Note: clicking any of these will save your msg on our database for Refining our Model</b></p>
-</body>
-</html>
+{% extends "layout.html" %}<!--template inheritance-->
+{% block content %}
+    <h3 class="h3 text-light">The message is {{output}}</h3>
+    <img src="/static/probab_pie_chart.png" class="img-fluid" id="pie_image"><br>
+    <h5 class="h5 text-light">FeedBack Buttons</h5>
+    <a href="/correct_pred" ><button class="btn btn-light">Correct Prediction</button></a>
+    <a href="/wrong_pred"><button class="btn btn-light">Wrong Prediction</button></a>
+    <p class="text-danger"><b>Note: On clicking this buttons we will save your msg on our database for Refining our Model</b></p>
+{% endblock content %}

@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMS Spam or Ham</title>
-</head>
-<body>
+{% extends "layout.html" %}<!--template inheritance-->
+{% block content %}
+
+    <h1 class="h1 text-white text-justify">SMS Spam Detector</h1>
+    <div class="container col-5  " id="container">
     <form action="/result" method="post">
-        <label for ="msg">SMS</label>
-        <textarea name="msg" id = 'msg' required>Enter Here</textarea>
-        <button type="submit">Check Spam or Ham</button>
+        <div class="form-group col-4">
+            <label for ="msg" class="text-light">SMS:</label>
+        <textarea name="msg" class="d-block form-control" id = 'msg' required>Enter Here</textarea></div>
+        <div><button type="submit" class=" btn btn-light" id="btn">Check Spam or Ham</button></div>
     </form>
-</body>
-</html>
+    </div>
+{% endblock content %}

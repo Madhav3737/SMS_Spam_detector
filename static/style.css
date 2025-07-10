@@ -1,0 +1,26 @@
+*{
+    margin: 1px;
+}
+.body{
+   background-color: #011627; 
+}
+
+.container-fluid{
+    justify-items: center;
+}
+
+.container{
+    position: relative;
+    border: 2px solid white;
+    /* justify-self: center;*/
+    justify-items: center;
+    background-color: #0091AD;
+    border-radius: 1rem;
+}
+#msg{
+    width: 250px;
+    margin-bottom: 5px;
+}
+#btn{
+    background-color: #2EC4B6;
+}

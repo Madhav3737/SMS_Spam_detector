@@ -51,7 +51,7 @@ def result():
 @app.route('/correct_pred',methods=['GET','POST'])
 def correct_prediction():
     # print("correct prediction")
-    p_list = [',','"',"'"]
+    p_list = [',','"',"'","\n","\r"]
     ref_msg = ''.join([c for c in msg if c not in p_list])
     # msg_to_insert = f"{ref_msg},{op}"
     with open('gathered_data.csv','a',newline='') as file:
