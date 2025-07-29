@@ -14,6 +14,10 @@ def ensure_nltk_resources():
         nltk.data.find('corpora/wordnet')
     except LookupError:
         nltk.download('wordnet',download_dir="./nltk_data")
+    try:
+        nltk.data.find('tokenizers/punkt_tab')
+    except LookupError:
+        nltk.download('punkt_tab',download_dir="./nltk_data")
 
 # Call this during first-time setup
 
