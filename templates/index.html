@@ -2,11 +2,11 @@
 {% block content %}
 
     <h1 class="h1 text-white text-justify">SMS Spam Detector</h1>
-    <div class="container col-5  " id="container">
+    <div class="container col-lg-5  " id="container">
     <form action="/result" method="post">
         <div class="form-group col-4">
             <label for ="msg" class="text-light">SMS:</label>
-        <textarea name="msg" class="d-block form-control" id = 'msg' required>Enter Here</textarea></div>
+        <textarea name="msg" class="d-block form-control" id = 'msg' placeholder="Enter the msg here" required></textarea></div>
         <div><button type="submit" class=" btn btn-light" id="btn">Check Spam or Ham</button></div>
     </form>
     </div>
