@@ -19,6 +19,9 @@ def ensure_nltk_resources():
         nltk.data.find('tokenizers/punkt_tab')
     except LookupError:
         nltk.download('punkt_tab',download_dir="./nltk_data")
-
+    try:
+        nltk.data.find('taggers/averaged_perceptron_tagger_eng')
+    except LookupError:
+        nltk.download('averaged_perceptron_tagger_eng') 
 # Call this during first-time setup
 
