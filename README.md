@@ -69,6 +69,10 @@ sms-spam-detection/
 ├── requirements.txt           # Required Python libraries
 └── README.md                  # Project documentation
 
+This App is actively deployed on Render:
+  You can try it using the link: https://sms-spam-detector-od0z.onrender.com/
+  There may be a service wake up delay due to the using the free version of render.
+
 ⚙️ Installation
 1️⃣ Clone the Repository
 git clone https://github.com/yourusername/sms-spam-detection.git
